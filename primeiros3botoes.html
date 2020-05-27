@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: SEGOE UI;
+      }
+      button {
+        height: 50px;
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      #div-tarefa-casa {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #div-tarefa-casa div {
+        display: flex;
+      }
+
+      #resultado-tarefa-casa {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>primeirasTarefas.js</h1>
+    <button onclick="aVidente()">Vidente</button>
+    <button onclick="leveiParaIlha()">Ilha</button>
+    <button onclick="escolhaAnimal()">Animal</button>
+
+    <span id="aparecendo">Eu queria ser um ornitorrinco.</span><br />
+    <span id="escondido"></span><br />
+
+    <div id="div-tarefa-casa">
+      <input
+        type="number"
+        id="input-numero"
+        value="0"
+        placeholder="Digite um número"
+      />
+      <div>
+        <button onclick="dobrar()">* 2</button>
+        <button onclick="dividePor2()">/ 2</button>
+      </div>
+      <span id="resultado-tarefa-casa"></span>
+    </div>
+
+    <script>
+      var nome = 'Eduardo';
+      var filhos = '2';
+      var cidade = 'Rio de Janeiro';
+      var profissao = 'Dev Fullstack Pleno';
+      var item1 = 'machado';
+      var item2 = 'pederneira';
+      var item3 = 'garrafa';
+      var span = document.querySelector('span');
+      var spanoculto = document.querySelector('#escondido');
+      var spannatela = document.querySelector('#aparecendo');
+      var numero = document.querySelector('#input-numero');
+      var resultado = document.querySelector('#resultado-tarefa-casa');
+
+      function aVidente() {
+        spanoculto.innerHTML = `A vidente prevê: Seu nome é ${nome}, terá ${filhos} filhas, viverá em ${cidade} e trabalhando como ${profissao}.`;
+      }
+
+      function leveiParaIlha() {
+        spanoculto.innerHTML = `Eu levaria para uma ilha deserta: ${item1}, ${item2} e ${item3}`;
+      }
+      function escolhaAnimal() {
+        spannatela.style.display = 'none';
+        spanoculto.innerHTML =
+          'Pensando melhor, eu gostaria de ser um elefante.';
+      }
+
+      function dobrar() {
+        resultado.innerHTML = `O dobro de ${numero.value} é ${
+          numero.value * 2
+        }`;
+      }
+
+      function dividePor2() {
+        resultado.innerHTML = `A metade de ${numero.value} é ${
+          numero.value / 2
+        }.`;
+      }
+    </script>
+  </body>
+</html>

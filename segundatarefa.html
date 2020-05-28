@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas segunda aula</title>
+    <style>
+      input {
+        width: 200px;
+      }
+      #joselito-laranjas {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        align-items: center;
+        margin: 50px auto;
+      }
+      button {
+        margin-top: 15px;
+        width: 200px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="joselito-laranjas">
+      <input
+        type="number"
+        id="laranjas"
+        placeholder="Quantas laranjas você tem?"
+      />
+      <input type="number" id="vizinhos" placeholder="Quantos vizinhos?" />
+      <button onclick="dividirLaranjas()">Dividir</button>
+      <span id="resultado"> </span>
+      <span id="resto"></span>
+    </div>
+    <script id="joselito">
+      var laranjas = document.querySelector('#laranjas');
+      var vizinhos = document.querySelector('#vizinhos');
+      var resultado = document.querySelector('#resultado');
+      var resto = document.querySelector('#resto');
+
+      function dividirLaranjas() {
+        resultado.innerHTML = `Cada vizinho vai levar ${parseInt(
+          laranjas.value / vizinhos.value
+        )} laranjas`;
+        resto.innerHTML = `Sobrou ${
+          laranjas.value % vizinhos.value
+        } pro Joselito.`;
+      }
+    </script>
+
+    <div id="joselito-laranjas">
+      <input
+        type="number"
+        id="custo"
+        placeholder="Qual o valor do custo da pizza?"
+      />
+      <input
+        type="number"
+        id="preco"
+        placeholder="Qual o valor de venda da pizza?"
+      />
+
+      <input type="text" id="nome" placeholder="Qual o nome da pizza?" />
+      <button onclick="calcularPizza()">Calcular</button>
+      <span id="mensagem"> </span>
+    </div>
+
+    <script id="pizzaria">
+      var custo = document.querySelector('#custo');
+      var preco = document.querySelector('#preco');
+      var nome = document.querySelector('#nome');
+      var mensagem = document.querySelector('#mensagem');
+
+      function calcularPizza() {
+        let imposto = parseFloat(
+          (preco.value * 1.089 - preco.value).toFixed(2)
+        );
+        let lucroliq = parseFloat(preco.value - imposto - custo.value).toFixed(
+          2
+        );
+
+        mensagem.innerHTML = `A pizza ${nome.value} custa R$${custo.value} e é vendida por R$${preco.value}. Seu imposto é de 8,9%, que representa R$${imposto}, deixando R$${lucroliq} de lucro líquido.`;
+      }
+    </script>
+  </body>
+</html>

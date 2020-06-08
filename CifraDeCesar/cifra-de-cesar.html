@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cifra de Cesar</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: SEGOE UI;
+      }
+
+      #cifra {
+        display: flex;
+        height: 100vh;
+        width: 90%;
+        justify-content: space-between;
+      }
+
+      .container {
+        min-height: 90%;
+        height: auto;
+        width: 45%;
+        background: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #encriptador div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40%;
+        justify-content: space-around;
+      }
+
+      #decriptador div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40%;
+        justify-content: space-around;
+      }
+
+      .botao {
+        height: 40px;
+        width: 200px;
+        margin-bottom: 10px;
+      }
+
+      #div-resultado-criptografia {
+        height: 80%;
+        width: 90%;
+      }
+
+      #resultado-criptografia {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+      }
+
+      #resultado-decriptografia {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cifra de Cesar</h1>
+    <div id="cifra">
+      <div id="encriptador" class="container">
+        <h2>Encriptador</h2>
+        <div>
+          <label>Insira uma mensagem a ser criptografada:</label>
+          <input
+            type="text"
+            id="input-criptografar"
+            placeholder="Digite seu texto aqui..."
+          />
+
+          <label>Insira o salto de criptografia:</label>
+          <input
+            type="number"
+            id="salto-criptografar"
+            placeholder="Digite um número..."
+          />
+
+          <button onclick="criptografar()" class="botao">Criptografar</button>
+        </div>
+        <div id="div-resultado-criptografia">
+          <h3>Resultado:</h3>
+          <span id="resultado-criptografia"></span>
+        </div>
+      </div>
+
+      <div id="decriptador" class="container">
+        <h2>Decriptador</h2>
+        <div>
+          <label>Insira uma mensagem a ser decriptografada:</label>
+          <input
+            type="text"
+            id="input-decriptografar"
+            placeholder="Digite seu texto aqui..."
+          />
+
+          <label>Insira o salto de decriptografia:</label>
+          <input
+            type="number"
+            id="salto-decriptografar"
+            placeholder="Digite um número..."
+          />
+
+          <button onclick="decriptografar()"" class="botao">
+            Decriptografar
+          </button>
+        </div>
+        <div id="div-resultado-decriptografia">
+          <h3>Resultado:</h3>
+          <span id="resultado-decriptografia"></span>
+        </div>
+      </div>
+    </div>
+    <script defer src="./cifra-de-cesar.js"></script>
+  </body>
+</html>

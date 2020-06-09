@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cyberDoom();</title>
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      height: 50%;
+      width: 50%;
+      background: lightgray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+    }
+
+    #player-name {
+      height: 30px;
+      width: 300px;
+      padding: 10px;
+      border-radius: 50px;
+      border: none;
+      margin-bottom: 30px;
+    }
+
+    .large-btn {
+      height: 50px;
+      width: 300px;
+      border-radius: 30px;
+      border: none;
+    }
+  </style>
+  <body>
+    <h1>Seja bem vindo ao cyberDesgraça();</h1>
+    <div class="container">
+      <input
+        type="text"
+        placeholder="Digite seu nome para começar..."
+        id="player-name"
+      />
+      <button class="large-btn" onclick="startGame()">Começar</button>
+    </div>
+    <script>
+      const inputName = document.getElementById('player-name');
+
+      function startGame() {
+        const playerName = inputName.value;
+        if (playerName == '') {
+          alert(
+            'Parece que você testou o botão antes de escrever seu nome. Vamos tentar de novo?'
+          );
+        } else {
+          alert(`Seja bem vindx, criatura cujo nome é ${playerName}`);
+        }
+      }
+    </script>
+  </body>
+</html>

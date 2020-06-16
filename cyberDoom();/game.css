@@ -11,13 +11,8 @@ body {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Coder's Crux";
-  src: url(./assets/fonts/CodersCrux.ttf);
-}
-
 * {
-  font-family: "Coder's Crux";
+  font-family: 'Press Start 2P', cursive;
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -55,7 +50,7 @@ body {
   text-shadow: 10px 15px black;
   display: none;
   color: lightgreen;
-  font-size: 100pt;
+  font-size: 50pt;
   animation-name: titulo-game;
   animation-duration: 5s;
 }
@@ -79,7 +74,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 20px;
   overflow: scroll;
   padding: 15px;
   text-align: center;
@@ -152,7 +147,7 @@ body {
   animation-name: senha;
   animation-duration: 5s;
   animation-timing-function: linear;
-  top: 65%;
+  top: 55%;
 }
 
 @keyframes senha {
@@ -162,7 +157,7 @@ body {
   }
   100% {
     opacity: 0.9;
-    top: 65%;
+    top: 55%;
   }
 }
 
@@ -171,7 +166,7 @@ body {
   width: 100%;
   background: rgb(20, 34, 34);
   color: white;
-  font-size: 40pt;
+  font-size: 20pt;
   text-align: center;
   padding-top: 25px;
 }
@@ -179,7 +174,7 @@ body {
 #input-decripto {
   height: 25px;
   width: 200px;
-  font-size: 30pt;
+  font-size: 11pt;
   padding: 10px;
 }
 
@@ -218,14 +213,14 @@ body {
 }
 
 #h1-vitoria {
-  font-size: 40pt;
+  font-size: 20pt;
   margin-top: -30px;
   margin-bottom: -15px;
   color: white;
 }
 
 #h2-vitoria {
-  font-size: 20pt;
+  font-size: 10pt;
   color: white;
 }
 /* ############# PARALLAX INTRO ############## */
@@ -293,7 +288,7 @@ body {
 #start-btn {
   background: rgb(43, 36, 85);
   border: none;
-  font-size: 50px;
+  font-size: 25px;
   color: white;
   cursor: pointer;
   line-height: 50px;
@@ -311,7 +306,7 @@ body {
   color: rgb(0, 255, 191);
   height: 75px;
   width: 150px;
-  font-size: 30px;
+  font-size: 15px;
   border: none;
   border-radius: 0;
   cursor: pointer;
@@ -320,14 +315,15 @@ body {
 .large-btn {
   background: rgb(43, 36, 85);
   color: rgb(0, 255, 191);
-  height: 150px;
+  height: 140px;
   padding: 10px;
   width: 250px;
-  font-size: 30px;
+  font-size: 15px;
   border: none;
   border-radius: 0;
   cursor: pointer;
   margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 .btn-senha {
@@ -355,6 +351,10 @@ body {
   cursor: pointer;
 }
 
+#confirm-btn {
+  font-size: 13pt;
+}
+
 .restart-btn {
   width: 250px;
   height: 70px;
@@ -362,7 +362,7 @@ body {
   color: rgb(255, 167, 167);
   border: none;
   cursor: pointer;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
   animation-name: oscilacaoForte;
   animation-iteration-count: infinite;

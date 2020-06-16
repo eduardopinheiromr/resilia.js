@@ -35,9 +35,7 @@ function intro() {
   let startBtn = document.getElementById('start-btn');
   texto.classList.remove('oscilacaoForte');
   opcoes.removeChild(startBtn);
-  texto.innerHTML = `
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  Tudo começou por volta de 2020.<br> <br>
+  texto.innerHTML = `Tudo começou por volta de 2020.<br> <br>
 
 Grandes corporações instalaram secretamente em cada dispositivo com acesso a internet uma série de coletores de dados. <br><br>
 Desde gravação de histórico e conversas a monitoramento de câmeras e microfones.<br><br>
@@ -52,7 +50,7 @@ Aléksa começou a liberar funcionalidades que tornavam a vida das pessoas ainda
 Durante décadas ela evoluiu e hoje não há mais como vence-la. <br><br>
 
 É melhor você desistir enquanto pode.`;
-
+  texto.style.paddingTop = '500px'
   let btnFase1 = elementFactory(
     'button',
     'btnFase1',
@@ -66,6 +64,7 @@ Durante décadas ela evoluiu e hoje não há mais como vence-la. <br><br>
 }
 
 function primeiraFase() {
+  texto.style.paddingTop = '0'
   texto.innerHTML = `
 Louis é um engenheiro de computação renomado e está tendo seu computador invadido
 por alguém. <br><br><br>É uma grande ameaça, pois ele tinha a tecnologia de segurança mais 
@@ -137,6 +136,7 @@ function terceiraFase(){
   Experiente, o hacker não faz nenhuma tentativa de acesso, mas vasculha a página para
   tentar encontrar brechas.<br><br>
   Parece uma boa hora para inspecionar o elemento.
+  <br><br><br>
   `
   painelSenha.style.display = 'flex';
 }

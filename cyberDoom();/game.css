@@ -1,0 +1,372 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Coder's Crux";
+  src: url(./assets/fonts/CodersCrux.ttf);
+}
+
+* {
+  font-family: "Coder's Crux";
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#divinterface {
+  display: flex;
+  background: none;
+  opacity: 0.9;
+  height: 80%;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 4;
+  position: relative;
+  bottom: 250%;
+  left: 14%;
+  animation-name: interface;
+  animation-duration: 1s;
+}
+
+@keyframes interface {
+  0% {
+    opacity: 0;
+    scale: 0.9;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+#titulo-game {
+  text-shadow: 10px 15px black;
+  display: none;
+  color: lightgreen;
+  font-size: 100pt;
+  animation-name: titulo-game;
+  animation-duration: 5s;
+}
+
+@keyframes titulo-game {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+#divtexto {
+  height: 60%;
+  width: 85%;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  overflow: scroll;
+  padding: 15px;
+  text-align: center;
+}
+
+#divopcoes {
+  height: 30%;
+  width: 90%;
+  margin-top: 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#texto {
+  color: white;
+}
+
+.transicao1s {
+  transition: 1s;
+}
+
+.oscilacaoForte {
+  transition: 2s;
+  animation-name: oscilacaoForte;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes oscilacaoForte {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+    color: orange;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+.oscilacaoSuave {
+  transition: 2s;
+  animation-name: oscilacaoSuave;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes oscilacaoForte {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#div-senha {
+  display: none;
+  position: absolute;
+  height: 250px;
+  width: 150px;
+  background: gray;
+  z-index: 10;
+  flex-flow: row wrap;
+  animation-name: senha;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  top: 65%;
+}
+
+@keyframes senha {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    opacity: 0.9;
+    top: 65%;
+  }
+}
+
+#input-senha {
+  height: 45px;
+  width: 100%;
+  background: rgb(20, 34, 34);
+  color: white;
+  font-size: 40pt;
+  text-align: center;
+  padding-top: 25px;
+}
+
+#input-decripto {
+  height: 25px;
+  width: 200px;
+  font-size: 30pt;
+  padding: 10px;
+}
+
+#boss {
+  margin-top: 450px;
+  animation-name: boss;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  margin-bottom: -50px;
+  z-index: 10;
+}
+
+@keyframes boss {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#ultima-pergunta {
+  margin-top: 100px;
+  z-index: 20;
+}
+
+#resposta-final {
+  height: 25px;
+  width: 200px;
+  font-size: 30pt;
+  padding: 10px;
+}
+
+#pote-cura {
+  height: 400px;
+  width: 550px;
+}
+
+#h1-vitoria {
+  font-size: 40pt;
+  margin-top: -30px;
+  margin-bottom: -15px;
+  color: white;
+}
+
+#h2-vitoria {
+  font-size: 20pt;
+  color: white;
+}
+/* ############# PARALLAX INTRO ############## */
+
+.layer1 {
+  min-height: 100%;
+  background-image: url('./assets/background/skyline-a.png');
+  background-size: 500px 800px;
+  background-repeat: repeat-x;
+  z-index: 1;
+  animation-timing-function: linear;
+  animation-name: slide-left;
+  animation-duration: 5000s;
+  animation-iteration-count: infinite;
+}
+
+.layer2 {
+  min-height: 70%;
+  background-image: url('./assets/background/buildings-bg.png');
+  background-size: 500px 700px;
+  background-repeat: repeat-x;
+  z-index: 2;
+  animation-timing-function: linear;
+  animation-name: slide-left;
+  animation-duration: 3000s;
+  animation-iteration-count: infinite;
+  position: relative;
+  bottom: 70%;
+}
+
+.layer3 {
+  min-height: 90%;
+  background-image: url('./assets/background/buildings-bg.png');
+  background-size: 500px 800px;
+  background-repeat: repeat-x;
+  z-index: 3;
+  animation-timing-function: linear;
+  animation-name: slide-left;
+  animation-duration: 2000s;
+  animation-iteration-count: infinite;
+  position: relative;
+  bottom: 120%;
+}
+
+.over-flow {
+  height: 100%;
+  overflow: hidden;
+  background: darkblue;
+  width: 100%;
+}
+
+@keyframes slide-left {
+  0% {
+    margin-left: -10000%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+/* ############## FIM DO PARALLAX #################### */
+
+/* ############## BOTÕES ################### */
+
+#start-btn {
+  background: rgb(43, 36, 85);
+  border: none;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  line-height: 50px;
+  transition: 1s;
+}
+
+#start-btn:hover {
+  background: lightgreen;
+  opacity: 0.5;
+  color: black;
+}
+
+.regular-btn {
+  background: rgb(43, 36, 85);
+  color: rgb(0, 255, 191);
+  height: 75px;
+  width: 150px;
+  font-size: 30px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.large-btn {
+  background: rgb(43, 36, 85);
+  color: rgb(0, 255, 191);
+  height: 150px;
+  padding: 10px;
+  width: 250px;
+  font-size: 30px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-senha {
+  height: 50px;
+  width: 50px;
+  font-size: 30pt;
+  background: darkslategray;
+  color: lightgreen;
+  cursor: pointer;
+}
+
+.btn-corrige {
+  height: 50px;
+  width: 50px;
+  font-size: 30pt;
+  background: red;
+  cursor: pointer;
+}
+
+.btn-confirma {
+  background: green;
+  height: 50px;
+  width: 50px;
+  font-size: 30pt;
+  cursor: pointer;
+}
+
+.restart-btn {
+  width: 250px;
+  height: 70px;
+  background: rgb(114, 10, 10);
+  color: rgb(255, 167, 167);
+  border: none;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  animation-name: oscilacaoForte;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+/* #################### FIM DOS BOTÕES ########################## */

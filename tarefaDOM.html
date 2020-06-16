@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brincando com o DOM</title>
+  </head>
+  <body>
+    <script>
+      const div = document.createElement('div');
+      div.setAttribute('id', 'btn-div');
+      document.body.appendChild(div);
+      const btnDiv = document.querySelector('#btn-div');
+
+      btnDiv.style.display = 'flex';
+      btnDiv.style.flexDirection = 'column';
+      btnDiv.style.alignItems = 'center';
+
+      const button = document.createElement('button');
+      btnDiv.appendChild(button);
+      const btnStart = document.querySelector('button');
+      btnStart.innerText = 'Clique em mim para ver o que eu faço :)';
+      btnStart.addEventListener('click', botaoClicado);
+
+      function botaoClicado() {
+        const span = document.createElement('span');
+        span.setAttribute('id', 'new-buttons');
+        btnDiv.appendChild(span);
+        const newButtons = document.querySelector('#new-buttons');
+        newButtons.style.display = 'flex';
+        newButtons.style.flexDirection = 'column';
+        for (i = 0; i < 20; i++) {
+          newButtons.innerHTML += `<button>Botão ${i}</button>`;
+        }
+      }
+    </script>
+  </body>
+</html>
